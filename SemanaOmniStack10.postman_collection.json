@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "63654e27-b4d6-4821-aa4d-4ab6d47ab02c",
+		"name": "SemanaOmniStack10",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Criar devs",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"github_username\": \"nurdism\",\n\t\"techs\": \"React, React Native, NodeJS\",\n\t\"latitude\": -26.8288602,\n\t\"longitude\" : -49.2711386\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3333/devs",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"devs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar devs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"github_username\": \"diego3g\",\n\t\"techs\": \"React, React Native, NodeJS\",\n\t\"latitude\": -27.0923899,\n\t\"longitude\" : -48.9734144\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3333/devs",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"devs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar devs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"github_username\": \"diego3g\",\n\t\"techs\": \"React, React Native, NodeJS\",\n\t\"latitude\": -27.0923899,\n\t\"longitude\" : -48.9734144\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3333/search?latitude=-27.0923899&longitude=-48.9734144&techs=React, VueJS",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "-27.0923899"
+						},
+						{
+							"key": "longitude",
+							"value": "-48.9734144"
+						},
+						{
+							"key": "techs",
+							"value": "React, VueJS"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
